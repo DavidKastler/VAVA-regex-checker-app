@@ -1,14 +1,11 @@
 package gumkaci.regexapp;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -34,7 +31,7 @@ public class HelloApplication extends Application {
 
             Alert a = new Alert(Alert.AlertType.INFORMATION);
             a.setTitle("Result");
-            a.setContentText(String.valueOf(matcher.find()));
+            a.setContentText(matcher.find() ? "OK" : "NG");
             a.showAndWait();
         });
 
