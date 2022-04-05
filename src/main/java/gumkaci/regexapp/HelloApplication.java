@@ -22,8 +22,6 @@ public class HelloApplication extends Application {
         Label regexLabel = new Label("Zadaj regex");
         TextField regexTextField = new TextField();
 
-        // CheckBox lowerCase = new CheckBox("Ch");
-
         Button checkButton = new Button("CHECK");
         checkButton.setOnAction(e -> {
             Pattern pattern = Pattern.compile(regexTextField.getText());
@@ -31,6 +29,7 @@ public class HelloApplication extends Application {
 
             Alert a = new Alert(Alert.AlertType.INFORMATION);
             a.setTitle("Result");
+            a.setHeaderText(null);
             a.setContentText(matcher.find() ? "OK" : "NG");
             a.showAndWait();
         });
